@@ -69,6 +69,7 @@
 }
 .card-header{
   background-color: #354b68;
+  border-radius: 10px !important;
 }
 .map{
   margin: 20px;
