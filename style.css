@@ -1,12 +1,12 @@
 .bg-light{
-  background-color: gray !important;
+  background-color: #8ea6c5	 !important;
 }
 .navbar{
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .active{
-  background-color: #505050;
+  background-color: #354b68	;
   border-radius: 10px;
 }
 .navbar-light .navbar-brand{
@@ -34,20 +34,26 @@
 .btn-group-lg>.btn, .btn-lg{
   border-radius: 10px;
 }
+.btn-primary{
+  background-color: #354b68	;
+  border-color: #354b68	;
+}
 .jumbotron{
+  background-color: #8ea6c5	 !important;
+
   grid-column: 2/4;
   border-radius: 10px;
   margin-bottom: 0;
   padding: 2rem;
 }
 .card{
-  background-color: lightgray !important;
+  background-color: #8ea6c5 !important;
   color: black;
   grid-column: 2/4;
   border-radius: 10px;
 }
 .btn-link{
-  color: black;
+  color: white;
 }
 .btn-link:hover{
   text-decoration: none;
@@ -60,6 +66,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 5px;
+}
+.card-header{
+  background-color: #354b68;
 }
 .map{
   margin: 20px;
@@ -113,4 +122,11 @@
 }
 .form-message{
   height: 10rem;
+}
+footer{
+  text-align: center;
+  padding: 30px;
+}
+footer a:hover{
+  text-decoration: none;
 }
