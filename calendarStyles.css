@@ -1,12 +1,19 @@
 ul {list-style-type: none;}
 
-
+.container{
+  display: block;
+  width: 75.4% !important;
+  margin: auto;
+  max-width: none;
+}
 /* Month header */
 .month {
     padding: 70px 25px;
     width: 100%;
     background: #354b68;
     text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 /* Month list */
@@ -77,9 +84,11 @@ ul {list-style-type: none;}
   margin: 5px;
 }
 .days {
-    padding: 10px 0;
+    padding: 10px;
     background: #f4f6f9;
     margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .days .empty{
   border-style: none;
