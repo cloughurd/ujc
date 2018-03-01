@@ -52,77 +52,87 @@
       <ul>
         <li class="prev">&#10094;</li>
         <li class="next">&#10095;</li>
-        <li>February<br><span style="font-size:18px">2017</span></li>
+        <li>March<br><span style="font-size:18px">2018</span></li>
       </ul>
     </div>
+
+<div id="app">
 <div class="calendar">
     <ul class="weekdays">
-        <div class="cal-title">
-      <li>Mo</li>
-      <li>Tu</li>
-      <li>We</li>
-      <li>Th</li>
-      <li>Fr</li>
-      <li>Sa</li>
-      <li>Su</li>
+      <div class="cal-title">
+        <li>Su</li>
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+      </div>
     </ul>
-    </div>
     <ul class="days">
     <div class="week">
       <li class="empty"></li>
       <li class="empty"></li>
       <li class="empty"></li>
-      <li>1</li>
-      <li class="active">2</li>
-      <li>3</li>
-      <li>4</li>
-    </div><div class="week">
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8<br>
-      Welding Class<br>
-      Location TBD</li>
-      <li>9</li>
-      <li>10</li>
-      <li>11</li>
-    </div><div class="week">
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-      <li>17<br>
-        UJC Club Ride<br>
-        Five Mile Pass</li>
-      <li>18</li>
-    </div><div class="week">
-      <li>19</li>
-      <li>20<br>
-      EJS Sign-Up Deadline</li>
-      <li>21</li>
-      <li>22</li>
-      <li>23</li>
-      <li>24<br>
-      Little Moab Cleanup</li>
-      <li>25</li>
-    </div><div class="week">
-      <li>26</li>
-      <li>27</li>
-      <li>28</li>
       <li class="empty"></li>
-      <li class="empty"></li>
-      <li class="empty"></li>
-      <li class="empty"></li>
+      <li>1<div v-if="events[0].added">{{ events[0].event }}<br>{{ events[0].loc }} at {{ events[0].time }}</div></li>
+      <li>2<div v-if="events[1].added">{{ events[1].event }}<br>{{ events[1].loc }} at {{ events[1].time }}</div></li>
+      <li>3<div v-if="events[2].added">{{ events[2].event }}<br>{{ events[2].loc }} at {{ events[2].time }}</div></li>
+    </div><div class="week">
+      <li>4<div v-if="events[3].added">{{ events[3].event }}<br>{{ events[3].loc }} at {{ events[3].time }}</div></li>
+      <li>5<div v-if="events[4].added">{{ events[4].event }}<br>{{ events[4].loc }} at {{ events[4].time }}</div></li>
+      <li>6<div v-if="events[5].added">{{ events[5].event }}<br>{{ events[5].loc }} at {{ events[5].time }}</div></li>
+      <li>7<div v-if="events[6].added">{{ events[6].event }}<br>{{ events[6].loc }} at {{ events[6].time }}</div></li>
+      <li>8<div v-if="events[7].added">{{ events[7].event }}<br>{{ events[7].loc }} at {{ events[7].time }}</div></li>
+      <li>9<div v-if="events[8].added">{{ events[8].event }}<br>{{ events[8].loc }} at {{ events[8].time }}</div></li>
+      <li>10<div v-if="events[9].added">{{ events[9].event }}<br>{{ events[9].loc }} at {{ events[9].time }}</div></li>
+    </div><div class="week">
+      <li>11<div v-if="events[10].added">{{ events[10].event }}<br>{{ events[10].loc }} at {{ events[10].time }}</div></li>
+      <li>12<div v-if="events[11].added">{{ events[11].event }}<br>{{ events[11].loc }} at {{ events[11].time }}</div></li>
+      <li>13<div v-if="events[12].added">{{ events[12].event }}<br>{{ events[12].loc }} at {{ events[12].time }}</div></li>
+      <li>14<div v-if="events[13].added">{{ events[13].event }}<br>{{ events[13].loc }} at {{ events[13].time }}</div></li>
+      <li>15<div v-if="events[14].added">{{ events[14].event }}<br>{{ events[14].loc }} at {{ events[14].time }}</div></li>
+      <li>16<div v-if="events[15].added">{{ events[15].event }}<br>{{ events[15].loc }} at {{ events[15].time }}</div></li>
+      <li>17<div v-if="events[16].added">{{ events[16].event }}<br>{{ events[16].loc }} at {{ events[16].time }}</div></li>
+    </div><div class="week">
+      <li>18<div v-if="events[17].added">{{ events[17].event }}<br>{{ events[17].loc }} at {{ events[17].time }}</div></li>
+      <li>19<div v-if="events[18].added">{{ events[18].event }}<br>{{ events[18].loc }} at {{ events[18].time }}</div></li>
+      <li>20<div v-if="events[19].added">{{ events[19].event }}<br>{{ events[19].loc }} at {{ events[19].time }}</div></li>
+      <li>21<div v-if="events[20].added">{{ events[20].event }}<br>{{ events[20].loc }} at {{ events[20].time }}</div></li>
+      <li>22<div v-if="events[21].added">{{ events[21].event }}<br>{{ events[21].loc }} at {{ events[21].time }}</div></li>
+      <li>23<div v-if="events[22].added">{{ events[22].event }}<br>{{ events[22].loc }} at {{ events[22].time }}</div></li>
+      <li>24<div v-if="events[23].added">{{ events[23].event }}<br>{{ events[23].loc }} at {{ events[23].time }}</div></li>
+    </div><div class="week">
+      <li>25<div v-if="events[24].added">{{ events[24].event }}<br>{{ events[24].loc }} at {{ events[24].time }}</div></li>
+      <li>26<div v-if="events[25].added">{{ events[25].event }}<br>{{ events[25].loc }} at {{ events[25].time }}</div></li>
+      <li>27<div v-if="events[26].added">{{ events[26].event }}<br>{{ events[26].loc }} at {{ events[26].time }}</div></li>
+      <li>28<div v-if="events[27].added">{{ events[27].event }}<br>{{ events[27].loc }} at {{ events[27].time }}</div></li>
+      <li>29<div v-if="events[28].added">{{ events[28].event }}<br>{{ events[28].loc }} at {{ events[28].time }}</div></li>
+      <li>30<div v-if="events[29].added">{{ events[29].event }}<br>{{ events[29].loc }} at {{ events[29].time }}</div></li>
+      <li>31<div v-if="events[30].added">{{ events[30].event }}<br>{{ events[30].loc }} at {{ events[30].time }}</div></li>
     </div>
     </ul>
 </div>
+<div class="eventAdder">
+  <form v-on:submit.prevent="addEvent">
+    <input class="formComponent" type="text" v-model="description" placeholder="Event Description">
+    <input class="formComponent" type="text" v-model="location" placeholder="Event Location">
+    <input class="formComponent" type="number" v-model="eventDay" placeholder="Day of the Month">
+    <input class="formComponent" type="text" v-model="eventTime" placeholder="Time of Event">
+    <button class="formComponent" type="submit">Add Event</button>
+  </form>
+</div>
+<div v-if="error" class="errorMsg">Sorry, that didn't work out</div>
+</div>
+
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="vueapp.js"></script>
   </body>
   <footer>
     Created by cloughurd<br>

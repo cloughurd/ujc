@@ -45,6 +45,7 @@
         </ul>
       </div>
     </nav>
+    <div id="app">
     <div id="accordion" class="jumbo-container">
       <div class="card">
         <div class="card-header" id="headingOne">
@@ -57,6 +58,14 @@
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
             Home to the popular obstacle Wayne's World, Five Mile is a popular wheeling spot for offroaders near and far. The hills and trails all around offer a great variety in offroad opportunity.
+            <star-rating @rating-selected="setRatingFMP"
+             v-bind:increment="0.25"
+             v-bind:max-rating="5"
+             inactive-color="#000"
+             active-color="red"
+             v-bind:show-rating=false>
+           </star-rating>
+          <p>Average Rating: {{ratings[0].rating}}</p>
           </div>
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97453.87380049264!2d-112.19508384193679!3d40.24389500476447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d666bcfb12f1f%3A0x5705314a8cb5e080!2sFive+Mile+Pass!5e0!3m2!1sen!2sus!4v1517545821633" frameborder="0" style="border:0" allowfullscreen></iframe>
           <div class="img-box"><img class="card-img" src="waynesworld.jpg"></div>
@@ -73,6 +82,14 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
           <div class="card-body">
             The old train tunnels up Elberta Slant road are some of the most requested offroad destinations for it's uniqueness. A network of trails in the surrounding area offer endless fun.
+            <star-rating @rating-selected="setRatingEST"
+             v-bind:increment="0.25"
+             v-bind:max-rating="5"
+             inactive-color="#000"
+             active-color="red"
+             v-bind:show-rating=false>
+           </star-rating>
+          <p>Average Rating: {{ratings[1].rating}}</p>
           </div>
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.3808846825013!2d-112.0284436842379!3d39.99993897941587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU5JzU5LjgiTiAxMTLCsDAxJzM0LjUiVw!5e0!3m2!1sen!2sus!4v1517547307947" frameborder="0" style="border:0" allowfullscreen></iframe>
           <div class="img-box"><img class="card-img" src="tunnels.jpg"></div>
@@ -89,6 +106,14 @@
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
           <div class="card-body">
             A popular spot, Little Moab features some fairly intense obstacles. Just a short drive from most in the Utah County area, Little Moab is a common destination for those wanting to test their rigs. Often referred to as more of an offroading playground than a trail.
+            <star-rating @rating-selected="setRatingLM"
+             v-bind:increment="0.25"
+             v-bind:max-rating="5"
+             inactive-color="#000"
+             active-color="red"
+             v-bind:show-rating=false>
+           </star-rating>
+          <p>Average Rating: {{ratings[2].rating}}</p>
           </div>
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d97763.4787367866!2d-112.00623479742958!3d40.028352224624896!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d0d5747fb926f%3A0xc3e8d1ea6265b8a8!2sLittle+Moab!5e0!3m2!1sen!2sus!4v1517543681191" frameborder="0" style="border:0" allowfullscreen></iframe>
           <div class="img-box"><img class="card-img" src="littleMoab.jpg"></div>
@@ -105,12 +130,21 @@
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
           <div class="card-body">
             AF Canyon is a very easily accessed location that offers tons of offroad adventure. It can be very busy during the summer, and is not open currently. Even if you keep asking, sadly. Features the popular forest lake trail.
+            <star-rating @rating-selected="setRatingAFC"
+             v-bind:increment="0.25"
+             v-bind:max-rating="5"
+             inactive-color="#000"
+             active-color="red"
+             v-bind:show-rating=false>
+           </star-rating>
+          <p>Average Rating: {{ratings[3].rating}}</p>
           </div>
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.508880695878!2d-111.63305368422532!3d40.50824197935468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDMwJzI5LjciTiAxMTHCsDM3JzUxLjEiVw!5e0!3m2!1sen!2sus!4v1517547437085" frameborder="0" style="border:0" allowfullscreen></iframe>
           <div class="img-box"><img class="card-img" src="forestLake.jpg"></div>
         </div>
       </div>
 
+    </div>
     </div>
 
 
@@ -119,6 +153,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+    <script src="locationsApp.js"></script>
+
   </body>
   <footer>
     Created by cloughurd<br>

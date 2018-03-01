@@ -118,3 +118,27 @@ ul {list-style-type: none;}
     background-color: #354b68;
     color: white !important
 }
+
+
+.eventAdder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.formComponent{
+  margin: 10px;
+  border-radius: 10px;
+  padding: .5rem 1rem;
+}
+button{
+    background-color: #354b68	;
+    border-color: #354b68	;
+    color: white;
+}
+.errorMsg{
+  text-align: center;
+  color: red;
+}

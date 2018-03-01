@@ -124,9 +124,18 @@
 .form-message{
   height: 10rem;
 }
+body{
+  margin-bottom: 70px;
+}
 footer{
+  background-color: #ADD8E6;
+  opacity: 0.6;
   text-align: center;
-  padding: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 10px;
 }
 footer a:hover{
   text-decoration: none;
